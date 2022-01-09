@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6136043987832229227}
   m_Layer: 0
   m_Name: CreateGraund_001
-  m_TagString: Untagged
+  m_TagString: Graund
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

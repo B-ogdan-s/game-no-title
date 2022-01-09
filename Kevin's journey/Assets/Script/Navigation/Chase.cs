@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * двигает камеру вслед за играком
+ */
+
 public class Chase : MonoBehaviour
 {
-    public GameObject player;
+    GameObject player;
 
     void Start()
     {

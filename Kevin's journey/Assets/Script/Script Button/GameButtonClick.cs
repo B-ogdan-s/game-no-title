@@ -2,41 +2,52 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * проверяет нажатие на основные игровые кнопки (движение, прыжёк)
+ */
+
 public class GameButtonClick : MonoBehaviour
 {
-    public TrafficPlayer player;
-    public Jump jumpPlayer;
+    CamTouch touch;
+    TrafficPlayer player;
+    Jump jumpPlayer;
 
     void Start()
     {
+        touch = GameObject.Find("Player Coordinates").GetComponent<CamTouch>();
         player = GameObject.Find("Player").GetComponent<TrafficPlayer>();
         jumpPlayer = GameObject.Find("Player").GetComponent<Jump>();
     }
 
     public void LeftButtonClickDown()
     {
-        player.leftButton = true;
+        player.LeftButton = true;
+        touch.enabled = false;
     }
     public void LeftButtonClickUp()
     {
-        player.leftButton = false;
+        player.LeftButton = false;
+        touch.enabled = true;
     }
 
     public void RightButtonClickDown()
     {
-        player.rightButton = true;
+        player.RightButton = true;
+        touch.enabled = false;
     }
     public void RightButtonClickUp()
     {
-        player.rightButton = false;
+        player.RightButton = false;
+        touch.enabled = true;
     }
 
     public void JumpButtonClicDown()
     {
-        jumpPlayer.jumpButton = true;
+        jumpPlayer.JumpButton = true;
+        touch.enabled = false;
     }
     public void JumpButtonClicUp()
     {
-        jumpPlayer.jumpButton = false;
+        jumpPlayer.JumpButton = false;
     }
 }

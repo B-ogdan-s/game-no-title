@@ -2,12 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Задаёт прыжёк играку
+ */
+
 public class Jump : MonoBehaviour
 {
     public Rigidbody player;
-    public int numJump;
+    int numJump = 1;
     public float force;
-    public bool jumpButton, jumpTrigger;
+
+    bool jumpButton;
+
+    public bool jumpTrigger;
 
     void Start()
     {
@@ -22,5 +29,17 @@ public class Jump : MonoBehaviour
             numJump--;
             jumpButton = false;
         }
+    }
+
+    public bool JumpButton
+    {
+        get { return jumpButton; }
+        set { jumpButton = value; }
+    }
+
+    public int NumJump
+    {
+        get { return numJump; }
+        set { numJump = value; }
     }
 }

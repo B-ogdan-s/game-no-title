@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Создаёт блоки земли в определённой области
+ */
 public class LevelGraundCreate : MonoBehaviour
 {
     public GameObject[] graundUp;
     public GameObject graund;
-    public int numX, numY, numZ;
+    int numX, numY, numZ;
 
     void Start()
     {

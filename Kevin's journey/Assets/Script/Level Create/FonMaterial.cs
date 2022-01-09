@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Менят материалы на объектах в зависимости от расположения игрока
+ */
+
 public class FonMaterial : MonoBehaviour
 {
     public Material[] material;

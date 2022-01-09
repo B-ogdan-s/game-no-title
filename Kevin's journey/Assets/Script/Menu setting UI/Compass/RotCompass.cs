@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * поварачивает стрелку компаса
+ */
+
 public class RotCompass : MonoBehaviour
 {
-    public GameObject player;
+    GameObject player;
 
     void Start()
     {

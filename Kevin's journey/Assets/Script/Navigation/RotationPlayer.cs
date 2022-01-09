@@ -2,12 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Поварачивает игрока после свайпа
+ */
+
 public class RotationPlayer : MonoBehaviour
 {
+    public TrafficPlayer player;
+    public Jump jumpPlayer;
+
     public float speedRotCam;
     public int numQueue = 0, rotNum = 0;
     public int[] queueRot = new int[0];
     public bool startRot = false;
+
+    void Start()
+    {
+        player = GameObject.Find("Player").GetComponent<TrafficPlayer>();
+        jumpPlayer = GameObject.Find("Player").GetComponent<Jump>();
+    }
 
     void Update()
     {
@@ -33,10 +46,16 @@ public class RotationPlayer : MonoBehaviour
                 ReduceMas();
                 Alignment();
                 startRot = false;
+
+                player.enabled = true;
+                jumpPlayer.enabled = true;
             }
             else
             {
                 transform.Rotate(0f, speedRotCam * queueRot[0], 0f);
+
+                player.enabled = false;
+                jumpPlayer.enabled = false;
             }
         }
     }

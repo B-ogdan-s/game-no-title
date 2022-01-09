@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Созаёт деревья в определённой области
+ */
 public class LevelTreeCreate : MonoBehaviour
 {
     public GameObject tree;
-    public int numX, numZ;
+    int numX, numZ;
 
     void Start()
     {

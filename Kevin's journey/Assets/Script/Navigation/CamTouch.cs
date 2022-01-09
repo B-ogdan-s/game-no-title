@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ * —читывает нажати€ на экран
+ */
+
 public class CamTouch : MonoBehaviour
 {
-    public Vector2 startToush, finishToush;
-    public RotationPlayer rotCam;
-    public float time;
+    Vector2 startToush, finishToush;
+    RotationPlayer rotCam;
+    float time = 0f;
 
     void Start()
     {
-        //rotCam = GameObject.Find("Player Coordinates").GetComponent<RotationCam>();
         rotCam = GameObject.Find("Player").GetComponent<RotationPlayer>();
     }
 

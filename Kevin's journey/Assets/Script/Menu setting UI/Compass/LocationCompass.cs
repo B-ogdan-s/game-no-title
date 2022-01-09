@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Адаптирует компас под размер экрана
+ */
+
 public class LocationCompass : MonoBehaviour
 {
     public float coordinatX, coordinatY;

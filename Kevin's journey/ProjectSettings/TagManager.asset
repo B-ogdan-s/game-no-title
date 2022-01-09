@@ -8,6 +8,9 @@ TagManager:
   - Fon
   - Layer_1
   - Layer_2
+  - Dealog_Check
+  - PlayerFon
+  - NPS
   layers:
   - Default
   - TransparentFX

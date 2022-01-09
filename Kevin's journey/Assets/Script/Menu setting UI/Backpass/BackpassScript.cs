@@ -2,23 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Создаёт меню инвентаря
+ */
+
 public class BackpassScript : MonoBehaviour
 {
-    public GameObject slotInventory, objSlot, fon, objFon, player;
-    public GameObject[] masBackpass;
-    public GameObject[] maseQuipment = new GameObject[5];
+    public GameObject slotInventory, fon;
+    GameObject objSlot, objFon, player;
+
+    GameObject[] masBackpass;
+    GameObject[] maseQuipment = new GameObject[5];
     public Transform canvas;
-    public int num = 3, numY = 0;
-    public float centreX, centreY, startPosX, startPosY, scaleX, scaleY;
+    public int num = 3;
+    float startPosX, startPosY, scaleX, scaleY;
 
     public void OpenBackpass()
     {
         player = GameObject.Find("Player");
         masBackpass = new GameObject[num];
-        numY = num / 4 + 1;
         scaleX = Screen.width / 2960f;
         scaleY = Screen.height / 1440f;
-        startPosX = scaleX * 50f;
+        startPosX = scaleX * 25f;
         startPosY = scaleY * 350f;
 
 
@@ -50,7 +55,7 @@ public class BackpassScript : MonoBehaviour
             objSlot = Instantiate(slotInventory) as GameObject;
             objSlot.transform.SetParent(canvas);
             objSlot.transform.localScale = new Vector3(scaleX, scaleX, 1f);
-            objSlot.transform.localPosition = new Vector3(-1200 * scaleX + i * (350f * 2f) * scaleX, 500 * scaleY, 0f);
+            objSlot.transform.localPosition = new Vector3(-1175 * scaleX + i * (350f * 2f) * scaleX, 500 * scaleY, 0f);
             objSlot.transform.rotation = Quaternion.Euler(0f, player.transform.localRotation.eulerAngles.y, 0f);
             maseQuipment[i] = objSlot;
         }
@@ -60,7 +65,7 @@ public class BackpassScript : MonoBehaviour
             objSlot = Instantiate(slotInventory) as GameObject;
             objSlot.transform.SetParent(canvas);
             objSlot.transform.localScale = new Vector3(scaleX, scaleX, 1f);
-            objSlot.transform.localPosition = new Vector3(-1200 * scaleX + i * 350f * scaleX, -500 * scaleY, 0f);
+            objSlot.transform.localPosition = new Vector3(-1175 * scaleX + i * 350f * scaleX, -500 * scaleY, 0f);
             objSlot.transform.rotation = Quaternion.Euler(0f, player.transform.localRotation.eulerAngles.y, 0f);
             maseQuipment[i + 2] = objSlot;
         }

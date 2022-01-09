@@ -2,9 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Задаёт движение играку принажатии на кнопки
+ */
+
 public class TrafficPlayer : MonoBehaviour
 {
-    public bool leftButton, rightButton;
+    bool leftButton, rightButton;
+
     public float speed;
     public RotationPlayer num;
 
@@ -29,5 +34,15 @@ public class TrafficPlayer : MonoBehaviour
         {
             transform.Translate(speed * Time.deltaTime, 0f, 0f);
         }
+    }
+    public bool LeftButton
+    {
+        get { return leftButton; }
+        set { leftButton = value; }
+    }
+    public bool RightButton
+    {
+        get { return rightButton; }
+        set { rightButton = value; }
     }
 }
