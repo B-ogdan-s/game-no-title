@@ -10,6 +10,10 @@ public class LevelUpdate : MonoBehaviour
 {
     void OnTriggerEnter(Collider col)
     {
+        if(col.gameObject.tag == "Passage")
+        {
+            Destroy(gameObject);
+        }
         if (col.gameObject.tag == "PlayerFon")
         {
             transform.localPosition -= new Vector3(0f, 30f, 0f);

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7006167954200827412}
   - component: {fileID: 5089571977745185655}
   m_Layer: 5
-  m_Name: Fon Dealog
+  m_Name: Fon Dialog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 3442142608940953478}
   m_Layer: 0
   m_Name: Player Coordinates
-  m_TagString: Player
+  m_TagString: PlayerFon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -579,7 +579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startNumJump: 0
-  touch: {fileID: 0}
+  touch: {fileID: 3442142608940953479}
   jumpPlayer: {fileID: 0}
   nameTag:
   - Graund
@@ -1110,6 +1110,7 @@ GameObject:
   - component: {fileID: 3442142609269487104}
   - component: {fileID: 3442142609269487107}
   - component: {fileID: 3442142609269487106}
+  - component: {fileID: 7775799004249381894}
   m_Layer: 5
   m_Name: Compass Fon
   m_TagString: Untagged
@@ -1176,6 +1177,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7775799004249381894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3442142609269487119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80a1429a22b019e47a3bb5375cc64538, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coordinatX: -1200
+  coordinatY: 450
 --- !u!1 &3442142609581898777
 GameObject:
   m_ObjectHideFlags: 0
@@ -1847,7 +1862,7 @@ GameObject:
   - component: {fileID: 5291731833216631608}
   - component: {fileID: 3200563098191957932}
   m_Layer: 5
-  m_Name: Dealog
+  m_Name: Dialog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2000,7 +2015,7 @@ MonoBehaviour:
   backpack: {fileID: 0}
   dealog: {fileID: 0}
   dealogFon: {fileID: 0}
-  touch: {fileID: 0}
+  touch: {fileID: 3442142608940953479}
   manager: {fileID: 0}
 --- !u!1 &6312668277220520518
 GameObject:

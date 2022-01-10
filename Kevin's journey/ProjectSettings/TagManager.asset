@@ -11,6 +11,8 @@ TagManager:
   - Dealog_Check
   - PlayerFon
   - NPS
+  - Passage
+  - PlayerDialog
   layers:
   - Default
   - TransparentFX
